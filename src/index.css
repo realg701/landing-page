@@ -24,7 +24,12 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #2c305a;
+  filter: drop-shadow(0 0 1em aquamarine);
+  color: aquamarine;
+}
+a:active {
+  filter: drop-shadow(0 0 1em #646cff);
+  color: #646cff;
 }
 
 button {
@@ -39,9 +44,12 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
+  filter: drop-shadow(0 0 1em #646cff);
   border-color: #646cff;
 }
 button:active {
+  filter: drop-shadow(0 0 1em aqua);
+
   border-color: aqua;
 }
 
@@ -49,9 +57,6 @@ button:active {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
   }
   button {
     background-color: #f9f9f9;

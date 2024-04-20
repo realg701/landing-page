@@ -6,7 +6,7 @@ const NavBar = () => {
       <div className="nav-bar">
         <div>
           <a className="brand-logo" href="#">
-            <img src="/public/logo1.png" className="logo" alt="Vite logo" />
+            <img src="/images/logo1.png" className="logo" alt="brand logo" />
             <h1>Shoes</h1>
           </a>
         </div>
@@ -15,7 +15,7 @@ const NavBar = () => {
             <a href="#">Products</a>
           </li>
           <li>
-            <a href="#">Links</a>
+            <a href="#">Category</a>
           </li>
           <li>
             <a href="#">About</a>
@@ -35,17 +35,17 @@ const NavBar = () => {
 export default NavBar;
 
 const Navigation = styled.div`
+  background-color: #888;
   width: 100%;
-
   position: fixed;
   z-index: 1;
-  background-color: #888;
+  top: 0;
 
   .nav-bar {
     display: flex;
     justify-content: space-between;
-    height: 70px;
     align-items: center;
+    max-height: 70px;
     max-width: 1280px;
     padding: 0 1.5em;
     margin: 0 auto;
@@ -66,10 +66,7 @@ const Navigation = styled.div`
       transition: filter 300ms;
     }
     .logo:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
-    }
-    .logo.react:hover {
-      filter: drop-shadow(0 0 2em #61dafbaa);
+      filter: drop-shadow(0 0 1em aquamarine);
     }
 
     @keyframes logo-spin {
