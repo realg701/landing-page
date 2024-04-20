@@ -5,25 +5,23 @@ const NavBar = () => {
     <Navigation>
       <div className="nav-bar">
         <div>
-          <a className="brand-logo" href="#" target="_blank">
+          <a className="brand-logo" href="#">
             <img src="/public/logo1.png" className="logo" alt="Vite logo" />
-            <h1>
-              <span> AH</span>-Shoes
-            </h1>
+            <h1>Shoes</h1>
           </a>
         </div>
         <ul className="links">
           <li>
-            <a href="#">Links</a>
+            <a href="#">Products</a>
           </li>
           <li>
             <a href="#">Links</a>
           </li>
           <li>
-            <a href="#">Links</a>
+            <a href="#">About</a>
           </li>
           <li>
-            <a href="#">Links</a>
+            <a href="#">Contact</a>
           </li>
         </ul>
         <div className="login">
@@ -37,6 +35,10 @@ const NavBar = () => {
 export default NavBar;
 
 const Navigation = styled.div`
+  width: 100%;
+
+  position: fixed;
+  z-index: 1;
   background-color: #888;
 
   .nav-bar {
@@ -54,7 +56,7 @@ const Navigation = styled.div`
       align-items: center;
 
       h1 {
-        font-size: 3em;
+        font-size: 32px;
       }
     }
 
