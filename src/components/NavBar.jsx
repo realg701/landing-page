@@ -35,11 +35,11 @@ const NavBar = () => {
 export default NavBar;
 
 const Navigation = styled.div`
-  background-color: #888;
   width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
+  background-color: #888;
 
   .nav-bar {
     display: flex;
@@ -47,8 +47,8 @@ const Navigation = styled.div`
     align-items: center;
     max-height: 70px;
     max-width: 1280px;
-    padding: 0 1.5em;
     margin: 0 auto;
+    padding: 0 1.5em;
 
     .brand-logo {
       display: flex;
