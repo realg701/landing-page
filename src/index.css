@@ -48,13 +48,12 @@ button:hover {
 }
 button:active {
   filter: drop-shadow(0 0 1em aqua);
-
   border-color: aqua;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #1a1a1a;
     background-color: #ffffff;
   }
   button {
