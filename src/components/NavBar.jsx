@@ -41,6 +41,11 @@ const Navigation = styled.div`
   top: 0;
   background-color: #888;
 
+  @media (0 < width < 600px) {
+    position: relative;
+    height: 12rem;
+  }
+
   .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -50,13 +55,18 @@ const Navigation = styled.div`
     margin: 0 auto;
     padding: 0 1.5em;
 
+    @media (0 < width < 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .brand-logo {
       display: flex;
       gap: 8px;
       align-items: center;
 
-      h1 {
-        font-size: 32px;
+      @media (0 < width < 600px) {
+        max-height: 70px;
       }
     }
 
@@ -68,19 +78,17 @@ const Navigation = styled.div`
     .logo:hover {
       filter: drop-shadow(0 0 1em aquamarine);
     }
-
+    @media (prefers-reduced-motion: no-preference) {
+      a .logo {
+        animation: logo-spin infinite 20s linear;
+      }
+    }
     @keyframes logo-spin {
       from {
         transform: rotate(0deg);
       }
       to {
         transform: rotate(360deg);
-      }
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      a .logo {
-        animation: logo-spin infinite 20s linear;
       }
     }
 

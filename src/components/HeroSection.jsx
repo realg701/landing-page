@@ -5,6 +5,9 @@ const HeroSection = () => {
     <MainContainer>
       <div className="hero-content">
         <h1>YOUR FEET DESERVE THE BEST</h1>
+        <div className="hero-image-sm">
+          <img src="/images/hero-image-2.png" alt="hero-image" />
+        </div>
         <p>
           YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR
           SHOES.YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR
@@ -41,6 +44,10 @@ const MainContainer = styled.div`
   height: calc(100vh - 100px);
   margin: 50px auto;
   padding: 0 1.5em;
+  @media (0 < width < 600px) {
+    margin: unset;
+    padding: 0 1em;
+  }
 
   .hero-content {
     display: flex;
@@ -50,6 +57,9 @@ const MainContainer = styled.div`
       font-size: 6em;
       font-weight: 800;
       line-height: 1em;
+      @media (0 < width < 600px) {
+        font-size: 4em;
+      }
     }
     p {
       max-width: 400px;
@@ -64,7 +74,6 @@ const MainContainer = styled.div`
         background: white;
         color: #1a1a1a;
       }
-
       @media (prefers-color-scheme: light) {
         button {
           color: white;
@@ -86,6 +95,14 @@ const MainContainer = styled.div`
     .brand-icons {
       display: flex;
       gap: 1em;
+      @media (0 < width < 600px) {
+        margin-bottom: 3em;
+      }
+      @media (prefers-color-scheme: light) {
+        button {
+          border: 1px solid #1a1a1a;
+        }
+      }
 
       button {
         background: white;
@@ -100,17 +117,24 @@ const MainContainer = styled.div`
         }
       }
     }
-
-    @media (prefers-color-scheme: light) {
-      button {
-        border: 1px solid #1a1a1a;
-      }
-    }
   }
 
   .hero-image {
     img {
       width: 140%;
+      @media (0 < width < 600px) {
+        display: none;
+      }
+    }
+  }
+
+  .hero-image-sm {
+    img {
+      width: 100%;
+      display: none;
+      @media (0 < width < 600px) {
+        display: block;
+      }
     }
   }
 `;
