@@ -1,38 +1,40 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
+import LoginModal from "./LoginModal";
 
-const NavBar = () => {
+const Header = () => {
   return (
     <Navigation>
       <div className="nav-bar">
         <div>
-          <a className="brand-logo" href="#">
+          <Link to={"/"} className="brand-logo">
             <img src="/images/logo1.png" className="logo" alt="brand logo" />
             <h1>Shoes</h1>
-          </a>
+          </Link>
         </div>
         <ul className="links">
           <li>
-            <a href="#">Products</a>
+            <Link to={"/products"}>Products</Link>
           </li>
           <li>
-            <a href="#">Category</a>
+            <Link to={"/category"}>Category</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to={"/aboutus"}>About</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to={"/contactus"}>Contact</Link>
           </li>
         </ul>
         <div className="login">
-          <button>Login</button>
+          <LoginModal />
         </div>
       </div>
     </Navigation>
   );
 };
 
-export default NavBar;
+export default Header;
 
 const Navigation = styled.div`
   width: 100%;

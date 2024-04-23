@@ -42,10 +42,10 @@ const MainContainer = styled.div`
   display: flex;
   max-width: 1280px;
   height: calc(100vh - 100px);
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 0 1.5em;
   @media (0 < width < 600px) {
-    margin: unset;
+    margin: 30px auto;
     padding: 0 1em;
   }
 
@@ -57,8 +57,11 @@ const MainContainer = styled.div`
       font-size: 6em;
       font-weight: 800;
       line-height: 1em;
+      margin: 0;
+
       @media (0 < width < 600px) {
         font-size: 4em;
+        /* margin: auto; */
       }
     }
     p {
@@ -96,7 +99,7 @@ const MainContainer = styled.div`
       display: flex;
       gap: 1em;
       @media (0 < width < 600px) {
-        margin-bottom: 3em;
+        margin-bottom: 6em;
       }
       @media (prefers-color-scheme: light) {
         button {
