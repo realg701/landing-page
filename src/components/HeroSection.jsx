@@ -61,7 +61,6 @@ const MainContainer = styled.div`
 
       @media (0 < width < 600px) {
         font-size: 4em;
-        /* margin: auto; */
       }
     }
     p {
