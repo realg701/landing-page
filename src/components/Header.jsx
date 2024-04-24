@@ -2,6 +2,27 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import LoginModal from "./LoginModal";
 
+const NavLinks = () => {
+  return (
+    <>
+      <ul className="links">
+        <li>
+          <Link to={"/products"}>Products</Link>
+        </li>
+        <li>
+          <Link to={"/category"}>Category</Link>
+        </li>
+        <li>
+          <Link to={"/aboutus"}>About</Link>
+        </li>
+        <li>
+          <Link to={"/contactus"}>Contact</Link>
+        </li>
+      </ul>
+    </>
+  );
+};
+
 const Header = () => {
   return (
     <Navigation>
@@ -12,20 +33,11 @@ const Header = () => {
             <h1>Shoes</h1>
           </Link>
         </div>
-        <ul className="links">
-          <li>
-            <Link to={"/products"}>Products</Link>
-          </li>
-          <li>
-            <Link to={"/category"}>Category</Link>
-          </li>
-          <li>
-            <Link to={"/aboutus"}>About</Link>
-          </li>
-          <li>
-            <Link to={"/contactus"}>Contact</Link>
-          </li>
-        </ul>
+        <div className="nav-links">
+          <NavLinks />
+        </div>
+        {/* <NavLinks /> */}
+        <div className="nav-links-mobile"></div>
         <div className="login">
           <LoginModal />
         </div>
@@ -94,11 +106,16 @@ const Navigation = styled.div`
       }
     }
 
-    ul {
-      display: flex;
-      padding: 0;
-      gap: 1.5em;
-      list-style: none;
+    .nav-links {
+      ul {
+        display: flex;
+        padding: 0;
+        gap: 1.5em;
+        list-style: none;
+      }
+      @media (0 < width < 600px) {
+        display: none;
+      }
     }
   }
 `;

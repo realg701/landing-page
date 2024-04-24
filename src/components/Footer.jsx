@@ -1,13 +1,12 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import BottomNav from "./BottomNav";
 
 const Footer = () => {
   return (
     <Navigation>
       <div className="nav-bar">
-        <Link to={"/"} className="brand-logo">
-          <img src="/images/logo1.png" className="logo" alt="brand logo" />
-        </Link>
+        <BottomNav />
       </div>
     </Navigation>
   );
@@ -26,10 +25,6 @@ const Navigation = styled.div`
   z-index: 10;
   bottom: 0;
   background-color: #888;
-
-  @media (0 < width < 600px) {
-    height: 2em;
-  }
 
   .nav-bar {
     .logo {
