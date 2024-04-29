@@ -13,10 +13,10 @@ const NavLinks = () => {
           <Link to={"/category"}>Category</Link>
         </li>
         <li>
-          <Link to={"/aboutus"}>About</Link>
+          <Link to={"/about"}>About</Link>
         </li>
         <li>
-          <Link to={"/contactus"}>Contact</Link>
+          <Link to={"/contact"}>Contact</Link>
         </li>
       </ul>
     </>
@@ -55,9 +55,8 @@ const Navigation = styled.div`
   top: 0;
   background-color: #888;
 
-  @media (0 < width < 600px) {
+  @media (width < 800px) {
     position: relative;
-    height: 12rem;
   }
 
   .nav-bar {
@@ -69,22 +68,13 @@ const Navigation = styled.div`
     margin: 0 auto;
     padding: 0 1.5em;
 
-    @media (0 < width < 600px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
     .brand-logo {
       display: flex;
-      gap: 8px;
       align-items: center;
-
-      @media (0 < width < 600px) {
-        max-height: 70px;
-      }
     }
 
     .logo {
+      margin-right: 8px;
       height: 2.5em;
       will-change: filter;
       transition: filter 300ms;
@@ -113,7 +103,7 @@ const Navigation = styled.div`
         gap: 1.5em;
         list-style: none;
       }
-      @media (0 < width < 600px) {
+      @media (width < 800px) {
         display: none;
       }
     }

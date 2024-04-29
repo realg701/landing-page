@@ -4,8 +4,8 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Category from "./pages/Category";
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/category" element={<Category />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Body>
         <Footer />

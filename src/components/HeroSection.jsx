@@ -5,14 +5,14 @@ const HeroSection = () => {
     <MainContainer>
       <div className="hero-content">
         <h1>YOUR FEET DESERVE THE BEST</h1>
-        <div className="hero-image-sm">
-          <img src="/images/hero-image-2.png" alt="hero-image" />
-        </div>
         <p>
           YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR
           SHOES.YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR
           SHOES.
         </p>
+        <div className="hero-image-sm">
+          <img src="/images/hero-image-2.png" alt="hero-image" />
+        </div>
         <div className="hero-btn">
           <button>Shop Now</button>
           <button className="second-btn">Category</button>
@@ -41,10 +41,9 @@ export default HeroSection;
 const MainContainer = styled.div`
   display: flex;
   max-width: 1280px;
-  height: calc(100vh - 100px);
-  margin: 100px auto;
+  margin: 80px auto;
   padding: 0 1.5em;
-  @media (0 < width < 600px) {
+  @media (width < 800px) {
     margin: 30px auto;
     padding: 0 1em;
   }
@@ -59,7 +58,7 @@ const MainContainer = styled.div`
       line-height: 1em;
       margin: 0;
 
-      @media (0 < width < 600px) {
+      @media (width < 800px) {
         font-size: 4em;
       }
     }
@@ -97,7 +96,7 @@ const MainContainer = styled.div`
     .brand-icons {
       display: flex;
       gap: 1em;
-      @media (0 < width < 600px) {
+      @media (width < 800px) {
         margin-bottom: 6em;
       }
       @media (prefers-color-scheme: light) {
@@ -123,8 +122,9 @@ const MainContainer = styled.div`
 
   .hero-image {
     img {
-      width: 140%;
-      @media (0 < width < 600px) {
+      width: 100%;
+      min-width: 600px;
+      @media (width < 800px) {
         display: none;
       }
     }
@@ -133,8 +133,9 @@ const MainContainer = styled.div`
   .hero-image-sm {
     img {
       width: 100%;
+      max-width: 600px;
       display: none;
-      @media (0 < width < 600px) {
+      @media (width < 800px) {
         display: block;
       }
     }

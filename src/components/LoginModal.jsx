@@ -19,7 +19,7 @@ const LoginModal = () => {
       >
         <Box>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            <h2>Login</h2>
+            <h3>Login</h3>
           </Typography>
           <Typography id="modal-modal-description">Usename</Typography>
           <input type="text" />
