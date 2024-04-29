@@ -42,7 +42,7 @@ const ContactUs = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "4a75f8c1-9e2b-405a-bca5-99cf20d95eb1");
+    formData.append("access_key", "{ paste_here }");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -82,10 +82,10 @@ const ContactUs = () => {
           <p>Also Available On</p>
           <div className="brand-icons">
             <button>
-              <img src="/images/metro.png" alt="metro-logo" />
+              <img src="/landing-page/images/metro.png" alt="metro-logo" />
             </button>
             <button href="#">
-              <img src="/images/daraz.png" alt="daraz-logo" />
+              <img src="/landing-page/images/daraz.png" alt="daraz-logo" />
             </button>
           </div>
         </div>
