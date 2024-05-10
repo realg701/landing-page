@@ -2,11 +2,13 @@ import styled from "styled-components";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const contactNumber = "0900 786 01";
+
 const getFormattedInputValue = (value) => {
-  const digits = value.replace(/\D/g, "").slice(0, 10);
+  const digits = value.replace(/\D/g, "").slice(0, 12);
   let res = "";
   if (digits.length > 0) {
-    res = `${digits.slice(0, 3)}`;
+    res = `+${digits.slice(0, 3)}`;
   }
   if (digits.length >= 4) {
     res = `(${res}) ${digits.slice(3, 6)}`;
@@ -23,7 +25,7 @@ const ContactUs = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const inputRef = useRef(null);
   const handleChange = (e) => {
-    const { value, selectionStart, selectonEnd } = e.target;
+    const { value, selectionStart, selectionEnd } = e.target;
     const formattedInputValue = getFormattedInputValue(value);
     setPhoneNumber(formattedInputValue);
     setTimeout(() => {
@@ -31,8 +33,8 @@ const ContactUs = () => {
         const position =
           formattedInputValue.indexOf(
             value[selectionStart - 1],
-            selectonEnd - 1
-          ) + 1 || selectonEnd;
+            selectionEnd - 1
+          ) + 1 || selectionEnd;
         inputRef.current.setSelectionRange(position, position);
       }
     }, 0);
@@ -70,13 +72,12 @@ const ContactUs = () => {
         <h1>Contact Us</h1>
         <p>
           Please feel free to contact us if you have any questions or enquiries.
-          Whether you require cleaning services or just want to ask us something
-          about cleaning in general, we’d love to hear from you!
+          Whether you require or just want to ask us something about our
+          products, we’d love to hear from you!
         </p>
         <p>
-          You can send us a contact message via the form below, call us toll
-          free on <a href="tel:0900 786 01">0900 786 01</a>, or contact our
-          state offices directly (see right).
+          You can send us a contact message via the form below, call us on{" "}
+          <a href={"tel:" + contactNumber}>{contactNumber}</a>.
         </p>
         <div className="shop">
           <p>Also Available On</p>
@@ -95,34 +96,7 @@ const ContactUs = () => {
         <h4>Please complete each field below.</h4>
         <form onSubmit={onSubmit}>
           <input type="hidden" name="subject" value={"MCC Client - " + name} />
-          <p>Services:</p>
-          <label htmlFor="1">
-            <input
-              id="1"
-              type="radio"
-              name="services"
-              value="Cleaning Quotation"
-            />
-            Cleaning Quotation
-          </label>
-          <label htmlFor="2">
-            <input
-              id="2"
-              type="radio"
-              name="services"
-              value="General Enquiry"
-            />
-            General Enquiry
-          </label>
-          <label htmlFor="3">
-            <input
-              id="3"
-              type="radio"
-              name="services"
-              value="Job or Career Enquiry"
-            />
-            Job or Career Enquiry
-          </label>
+
           <p>Name:</p>
           <input
             onChange={(e) => setName(e.target.value)}
@@ -168,7 +142,7 @@ const MainContainer = styled.div`
   padding: 0 1.5em;
   @media (width < 800px) {
     flex-direction: column;
-    margin: 30px auto;
+    margin: 30px auto 100px;
     padding: 0 1em;
   }
   a {
