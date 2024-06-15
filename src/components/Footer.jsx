@@ -5,11 +5,7 @@ const Footer = () => {
   return (
     <Navigation>
       <div className="nav-bar">
-        <img
-          src="/landing-page/images/logo1.png"
-          className="logo"
-          alt="brand logo"
-        />
+        <img src="/images/logo1.png" className="logo" alt="brand logo" />
         <BottomNav className="none" />
       </div>
     </Navigation>

@@ -11,7 +11,7 @@ const HeroSection = () => {
           SHOES.
         </p>
         <div className="hero-image-sm">
-          <img src="/landing-page/images/hero-image-2.png" alt="hero-image" />
+          <img src="/images/hero-image-2.png" alt="hero-image" />
         </div>
         <div className="hero-btn">
           <button>Shop Now</button>
@@ -21,16 +21,16 @@ const HeroSection = () => {
           <p>Also Available On</p>
           <div className="brand-icons">
             <button>
-              <img src="/landing-page/images/metro.png" alt="metro-logo" />
+              <img src="/images/metro.png" alt="metro-logo" />
             </button>
             <button href="#">
-              <img src="/landing-page/images/daraz.png" alt="daraz-logo" />
+              <img src="/images/daraz.png" alt="daraz-logo" />
             </button>
           </div>
         </div>
       </div>
       <div className="hero-image">
-        <img src="/landing-page/images/hero-image-2.png" alt="hero-image" />
+        <img src="/images/hero-image-2.png" alt="hero-image" />
       </div>
     </MainContainer>
   );

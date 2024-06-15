@@ -29,7 +29,7 @@ const Header = () => {
       <div className="nav-bar">
         <div>
           <Link to={"/"} className="brand-logo">
-            <img src="/landing-page/images/logo1.png" className="logo" alt="brand logo" />
+            <img src="/images/logo1.png" className="logo" alt="brand logo" />
             <h1>Shoes</h1>
           </Link>
         </div>
